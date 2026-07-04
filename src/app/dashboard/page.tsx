@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Sidebar } from '@/components/Sidebar';
 import { TopAppBar } from '@/components/TopAppBar';
+import { SpendingTrend } from '@/components/SpendingTrend';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Wallet, CreditCard, Send, History, TrendingUp, X, Check } from 'lucide-react';
 
@@ -194,6 +195,9 @@ export default function Dashboard() {
                     </table>
                   </div>
                 </div>
+
+                {/* Spending Trend Section */}
+                <SpendingTrend />
 
               </div>
 
