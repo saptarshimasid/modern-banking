@@ -7,6 +7,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Preloader } from '@/components/Preloader';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { TopologyCarousel } from '@/components/TopologyCarousel';
 import { Shield, Zap, TrendingUp, Sparkles, HelpCircle, ChevronDown, ArrowRight, Activity, Network, Lock, Server, Cpu, Database, Eye, CheckCircle } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -405,37 +406,8 @@ export default function HomeLanding() {
                   ))}
                 </ul>
               </div>
-              <div className="relative h-[500px] w-full" style={{ perspective: '1000px' }}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="arch-node absolute z-30 glass-card w-48 h-48 rounded-2xl border border-primary-container/40 flex flex-col items-center justify-center shadow-[0_0_30px_rgba(42,241,254,0.2)] bg-black/60 backdrop-blur-xl hover:scale-110 hover:border-primary-container transition-all cursor-pointer">
-                    <Cpu className="w-10 h-10 text-primary-container mb-3" />
-                    <span className="font-space-grotesk text-xs uppercase tracking-widest text-white">Central Brain</span>
-                  </div>
-                  <div className="arch-node absolute z-20 -translate-x-40 -translate-y-32 glass-card w-36 h-36 rounded-xl border border-secondary-container/30 flex flex-col items-center justify-center bg-black/40 backdrop-blur-md hover:scale-110 hover:border-secondary-container transition-all cursor-pointer">
-                    <Server className="w-8 h-8 text-secondary-container mb-2" />
-                    <span className="font-space-grotesk text-[10px] uppercase tracking-widest text-white">Risk Node</span>
-                  </div>
-                  <div className="arch-node absolute z-20 translate-x-40 -translate-y-24 glass-card w-36 h-36 rounded-xl border border-purple-500/30 flex flex-col items-center justify-center bg-black/40 backdrop-blur-md hover:scale-110 hover:border-purple-400 transition-all cursor-pointer">
-                    <Database className="w-8 h-8 text-purple-400 mb-2" />
-                    <span className="font-space-grotesk text-[10px] uppercase tracking-widest text-white">State Store</span>
-                  </div>
-                  <div className="arch-node absolute z-20 -translate-x-24 translate-y-36 glass-card w-36 h-36 rounded-xl border border-green-500/30 flex flex-col items-center justify-center bg-black/40 backdrop-blur-md hover:scale-110 hover:border-green-400 transition-all cursor-pointer">
-                    <Network className="w-8 h-8 text-green-400 mb-2" />
-                    <span className="font-space-grotesk text-[10px] uppercase tracking-widest text-white">Execution</span>
-                  </div>
-                  <div className="arch-node absolute z-20 translate-x-32 translate-y-28 glass-card w-36 h-36 rounded-xl border border-pink-500/30 flex flex-col items-center justify-center bg-black/40 backdrop-blur-md hover:scale-110 hover:border-pink-400 transition-all cursor-pointer">
-                    <Eye className="w-8 h-8 text-pink-400 mb-2" />
-                    <span className="font-space-grotesk text-[10px] uppercase tracking-widest text-white">Compliance</span>
-                  </div>
-                  
-                  {/* Connecting lines */}
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30" style={{ zIndex: 10 }}>
-                    <line x1="50%" y1="50%" x2="25%" y2="25%" stroke="#2af1fe" strokeWidth="1" strokeDasharray="4" className="animate-pulse" />
-                    <line x1="50%" y1="50%" x2="75%" y2="30%" stroke="#2af1fe" strokeWidth="1" strokeDasharray="4" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
-                    <line x1="50%" y1="50%" x2="40%" y2="70%" stroke="#2af1fe" strokeWidth="1" strokeDasharray="4" className="animate-pulse" style={{ animationDelay: '0.2s' }} />
-                    <line x1="50%" y1="50%" x2="65%" y2="65%" stroke="#2af1fe" strokeWidth="1" strokeDasharray="4" className="animate-pulse" style={{ animationDelay: '0.8s' }} />
-                  </svg>
-                </div>
+              <div className="relative w-full h-[500px] flex items-center justify-center overflow-visible">
+                <TopologyCarousel />
               </div>
             </div>
           </section>
