@@ -156,27 +156,21 @@ a, button, select, input[type="range"], [role="button"], .cursor-pointer, .hover
 }
 
 /* Light mode text visibility fixes */
-html.light h1:not(footer *):not(.preloader-overlay *),
-html.light h2:not(footer *):not(.preloader-overlay *),
-html.light h3:not(footer *):not(.preloader-overlay *),
-html.light h4:not(footer *):not(.preloader-overlay *),
-html.light h5:not(footer *):not(.preloader-overlay *),
-html.light h6:not(footer *):not(.preloader-overlay *) {
+html.light h1:not(footer *),
+html.light h2:not(footer *),
+html.light h3:not(footer *),
+html.light h4:not(footer *),
+html.light h5:not(footer *),
+html.light h6:not(footer *) {
   color: #111827 !important;
 }
 
-html.light .text-white:not(footer *):not(.preloader-overlay *) {
+html.light .text-white:not(footer *) {
   color: #111827 !important;
 }
 
-html.light [class*="text-white/"]:not(footer *):not(.preloader-overlay *) {
+html.light [class*="text-white/"]:not(footer *) {
   color: #111827 !important;
-}
-
-/* Force dark theme variables for the preloader to keep it readable and high contrast on its dark background */
-.preloader-overlay {
-  --color-primary-container: #00f0ff !important;
-  --color-on-surface-variant: #b9cacb !important;
 }
 
 /* Force dark theme variables for the footer in light mode to keep it readable and high contrast */
